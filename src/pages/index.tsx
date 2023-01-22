@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Articles from "@/components/articles";
+import ContactMe from "@/components/contact-me";
 import Experience from "@/components/experience";
 import FeaturedProjects from "@/components/featured-projects";
 import Hero from "@/components/hero";
@@ -18,6 +19,7 @@ export default function HomePage() {
       <FeaturedProjects />
       <NoteWorthyProjects />
       <Articles />
+      <ContactMe />
     </Box>
   );
 }
