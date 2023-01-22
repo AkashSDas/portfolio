@@ -10,6 +10,9 @@ import type { AppProps } from "next/app";
 export const cubano = localFont({
   src: "../../public/fonts/cubano.ttf",
   variable: "--font-cubano",
+  preload: true,
+  weight: "400",
+  style: "normal",
 });
 
 export const gtWalsheimPro = localFont({
