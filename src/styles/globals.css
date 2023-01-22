@@ -6,19 +6,19 @@
 /* Font faces for different weights */
 
 @font-face {
-  font-family: "GTWalsheimPro";
+  font-family: "GT Walsheim Pro";
   src: url(../../public/fonts/GTWalsheimPro/regular.ttf);
   font-weight: 400;
 }
 
 @font-face {
-  font-family: "GTWalsheimPro";
+  font-family: "GT Walsheim Pro";
   src: url(../../public/fonts/GTWalsheimPro/medium.ttf);
   font-weight: 500;
 }
 
 @font-face {
-  font-family: "GTWalsheimPro";
+  font-family: "GT Walsheim Pro";
   src: url(../../public/fonts/GTWalsheimPro/bold.ttf);
   font-weight: 600;
 }
