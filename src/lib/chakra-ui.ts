@@ -1,39 +1,10 @@
-import { m } from "framer-motion";
-
 import { extendTheme } from "@chakra-ui/react";
-import localFont from "@next/font/local";
 
 var fonts = {
   heading: "Cubano, sans-serif",
   body: `'GT Walsheim Pro', sans-serif`,
   button: `'GT Walsheim Pro', sans-serif`,
 };
-
-export const cubano = localFont({
-  src: "../../public/fonts/cubano.ttf",
-  variable: "--font-cubano",
-});
-
-export const gtWalsheimPro = localFont({
-  src: [
-    {
-      path: "../../public/fonts/GTWalsheimPro/regular.ttf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/GTWalsheimPro/medium.ttf",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/GTWalsheimPro/bold.ttf",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-  variable: "--font-gtwalsheimpro",
-});
 
 var colors = {
   b: {
