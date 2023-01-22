@@ -1,7 +1,7 @@
 import { extendTheme } from "@chakra-ui/react";
 
 var fonts = {
-  heading: "Cubano, sans-serif",
+  heading: `'Cubano', sans-serif`,
   body: `'GT Walsheim Pro', sans-serif`,
   button: `'GT Walsheim Pro', sans-serif`,
 };
