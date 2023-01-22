@@ -143,7 +143,7 @@ export default function FeaturedProjects() {
   }
 }
 
-function GitHubIcon() {
+export function GitHubIcon() {
   return (
     <Icon>
       <svg viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -5,6 +5,7 @@ import Link from "next/link";
 import Experience from "@/components/experience";
 import FeaturedProjects from "@/components/featured-projects";
 import Hero from "@/components/hero";
+import NoteWorthyProjects from "@/components/note-worthy-projects";
 import { pxToRem } from "@/lib/chakra-ui";
 import { Badge, Box, Center, chakra, Divider, Heading, HStack, Icon, LinkBox, Text, VStack } from "@chakra-ui/react";
 
@@ -14,6 +15,7 @@ export default function HomePage() {
       <Hero />
       <Experience />
       <FeaturedProjects />
+      <NoteWorthyProjects />
     </Box>
   );
 }
