@@ -2,6 +2,7 @@ import { isValidMotionProp, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
+import Articles from "@/components/articles";
 import Experience from "@/components/experience";
 import FeaturedProjects from "@/components/featured-projects";
 import Hero from "@/components/hero";
@@ -16,6 +17,7 @@ export default function HomePage() {
       <Experience />
       <FeaturedProjects />
       <NoteWorthyProjects />
+      <Articles />
     </Box>
   );
 }

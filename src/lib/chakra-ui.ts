@@ -1,3 +1,5 @@
+import { m } from "framer-motion";
+
 import { extendTheme } from "@chakra-ui/react";
 import localFont from "@next/font/local";
 
@@ -60,6 +62,18 @@ var Button = {
       fontFamily: "body",
       fontWeight: "normal",
       rounded: "full",
+      h: pxToRem(40),
+      px: pxToRem(24),
+      _hover: { bg: "#F5F5F5" },
+      _active: { bg: "#E5E5E5" },
+    },
+    outline: {
+      color: "b.text0",
+      fontFamily: "body",
+      fontWeight: "normal",
+      rounded: "full",
+      border: "1px solid",
+      borderColor: "b.border",
       h: pxToRem(40),
       px: pxToRem(24),
       _hover: { bg: "#F5F5F5" },
