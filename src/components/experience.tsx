@@ -1,6 +1,8 @@
 import Image from "next/image";
+import { useContext } from "react";
 
 import { pxToRem } from "@/lib/chakra-ui";
+import { ScrollContext } from "@/lib/context";
 import { Badge, Box, Center, Divider, Heading, HStack, Text, VStack } from "@chakra-ui/react";
 
 export function renderSkills(skill: string) {
@@ -12,8 +14,10 @@ export function renderSkills(skill: string) {
 }
 
 export default function Experience() {
+  var experienceRef = useContext(ScrollContext).experienceRef;
+
   return (
-    <Center as="section" my={pxToRem(128)}>
+    <Center ref={experienceRef} as="section" my={pxToRem(128)}>
       <VStack gap={pxToRem(32)} w="full">
         <Heading h={pxToRem(44)}>Experience</Heading>
         <Divider w="100%" maxW={pxToRem(800)} borderStyle="dashed" />

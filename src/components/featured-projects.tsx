@@ -1,7 +1,8 @@
 import Image from "next/image";
-import { useRef } from "react";
+import { useContext, useRef } from "react";
 
 import { pxToRem } from "@/lib/chakra-ui";
+import { ScrollContext } from "@/lib/context";
 import { Box, Divider, Heading, HStack, Icon, Text, VStack } from "@chakra-ui/react";
 
 import { renderSkills } from "./experience";
@@ -42,8 +43,10 @@ var projects = [
 ];
 
 export default function FeaturedProjects() {
+  var featuredProjectsRef = useContext(ScrollContext).workRef;
+
   return (
-    <Box as="section" my={pxToRem(128)}>
+    <Box ref={featuredProjectsRef} as="section" my={pxToRem(128)}>
       <Heading h={pxToRem(44)} w="full" textAlign="center" mb={pxToRem(32)}>
         Featured Projects
       </Heading>

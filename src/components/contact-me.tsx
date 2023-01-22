@@ -1,9 +1,14 @@
+import { useContext } from "react";
+
 import { pxToRem } from "@/lib/chakra-ui";
+import { ScrollContext } from "@/lib/context";
 import { Badge, Center, Divider, Heading, HStack, Icon, Text, VStack } from "@chakra-ui/react";
 
 export default function ContactMe() {
+  var contactMeRef = useContext(ScrollContext).contactRef;
+
   return (
-    <VStack gap={pxToRem(32)} w="full" my={pxToRem(128)}>
+    <VStack ref={contactMeRef} gap={pxToRem(32)} w="full" my={pxToRem(128)}>
       <Heading h={pxToRem(44)}>Contact Me</Heading>
       <Divider w="100%" maxW={pxToRem(800)} borderStyle="dashed" />
 

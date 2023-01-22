@@ -1,12 +1,14 @@
 import "@/styles/globals.css";
 
+import { useRef } from "react";
+
 import Navbar from "@/components/navbar";
 import { chakraTheme } from "@/lib/chakra-ui";
+import { ScrollContext } from "@/lib/context";
 import { ChakraProvider } from "@chakra-ui/react";
 import localFont from "@next/font/local";
 
 import type { AppProps } from "next/app";
-
 export const cubano = localFont({
   src: "../../public/fonts/cubano.ttf",
   variable: "--font-cubano",
@@ -37,11 +39,25 @@ export const gtWalsheimPro = localFont({
 });
 
 export default function App({ Component, pageProps }: AppProps) {
+  var experienceRef = useRef();
+  var workRef = useRef();
+  var articlesRef = useRef();
+  var contactRef = useRef();
+
   return (
     <div className={`${gtWalsheimPro.variable} ${cubano.variable}`}>
       <ChakraProvider theme={chakraTheme}>
-        <Navbar />
-        <Component {...pageProps} />
+        <ScrollContext.Provider
+          value={{
+            experienceRef,
+            workRef,
+            articlesRef,
+            contactRef,
+          }}
+        >
+          <Navbar />
+          <Component {...pageProps} />
+        </ScrollContext.Provider>
       </ChakraProvider>
     </div>
   );

@@ -1,6 +1,8 @@
 import Image from "next/image";
+import { useContext } from "react";
 
 import { pxToRem } from "@/lib/chakra-ui";
+import { ScrollContext } from "@/lib/context";
 import { Box, Button, Divider, Heading, HStack, SimpleGrid, Text, VStack } from "@chakra-ui/react";
 
 import { renderSkills } from "./experience";
@@ -33,8 +35,10 @@ var articles = [
 ];
 
 export default function Articles() {
+  var articleRef = useContext(ScrollContext).articlesRef;
+
   return (
-    <VStack gap={pxToRem(32)} w="full" my={pxToRem(128)}>
+    <VStack ref={articleRef} gap={pxToRem(32)} w="full" my={pxToRem(128)}>
       <Heading h={pxToRem(44)}>Other Noteworthy Projects</Heading>
       <Divider w="100%" maxW={pxToRem(800)} borderStyle="dashed" />
 
