@@ -13,8 +13,8 @@ export function renderSkills(skill: string) {
 
 export default function Experience() {
   return (
-    <Center as="section" my={pxToRem(64)}>
-      <VStack gap={pxToRem(56)} w="full">
+    <Center as="section" my={pxToRem(128)}>
+      <VStack gap={pxToRem(32)} w="full">
         <Heading h={pxToRem(44)}>Experience</Heading>
         <Divider w="100%" maxW={pxToRem(800)} borderStyle="dashed" />
 

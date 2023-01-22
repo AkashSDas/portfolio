@@ -3,7 +3,7 @@ import { Button, Center, HStack, Text, VStack } from "@chakra-ui/react";
 
 export default function Hero() {
   return (
-    <Center h="container.md" as="section">
+    <Center my={pxToRem(128)} as="section">
       <VStack gap={pxToRem(16)} alignItems="start">
         <Text>👋 Hi, my name is</Text>
 
