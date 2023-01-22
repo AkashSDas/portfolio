@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <Center h="container.md" as="section">
       <VStack gap={pxToRem(16)} alignItems="start">
-        <Text color="b.text0">👋 Hi, my name is</Text>
+        <Text>👋 Hi, my name is</Text>
 
         <VStack gap={0} alignItems="start">
           <Text
@@ -35,7 +35,7 @@ export default function Hero() {
           </HStack>
         </VStack>
 
-        <Text maxW={pxToRem(500)} color="b.text1" lineHeight="140%">
+        <Text maxW={pxToRem(500)} opacity={0.6} lineHeight="140%">
           I’m a software engineer specialising in building (& often designing)
           digital products which would provide high utility value to the
           clients. Currently I’m focusing on building web products.

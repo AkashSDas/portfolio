@@ -10,9 +10,7 @@ export default function Navbar() {
       h={pxToRem(56)}
       px={pxToRem(32)}
     >
-      <Text fontFamily="heading" color="b.text0">
-        /Root
-      </Text>
+      <Text fontFamily="heading">/Root</Text>
 
       <HStack gap={pxToRem(8)}>
         <Button variant="ghost">Experience</Button>

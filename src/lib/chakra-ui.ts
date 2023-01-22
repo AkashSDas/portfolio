@@ -37,7 +37,6 @@ var colors = {
   b: {
     primary: "#DF583B",
     text0: "#1C1F24",
-    text1: "#1d2025",
     bg: "#FCFCFC",
     border: "#F5F5F5",
   },
