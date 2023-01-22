@@ -68,7 +68,28 @@ var Button = {
   },
 };
 
-export var chakraTheme = extendTheme({ fonts, colors, components: { Button } });
+var Badge = {
+  baseStyle: {
+    fontFamily: "body",
+    fontWeight: "normal",
+    textTransform: "none",
+    rounded: "full",
+    px: pxToRem(8),
+    h: pxToRem(24),
+    bg: "b.border",
+    color: "rgba(28, 31, 36, 0.6)",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    fontSize: pxToRem(14),
+  },
+};
+
+export var chakraTheme = extendTheme({
+  fonts,
+  colors,
+  components: { Button, Badge },
+});
 
 export function pxToRem(px: number): string {
   return `${px / 16}rem`;
