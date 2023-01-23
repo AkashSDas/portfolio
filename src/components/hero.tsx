@@ -1,7 +1,12 @@
+import { useContext } from "react";
+
 import { pxToRem } from "@/lib/chakra-ui";
+import { ScrollContext } from "@/lib/context";
 import { Button, Center, HStack, Text, VStack } from "@chakra-ui/react";
 
 export default function Hero() {
+  var workRef = useContext(ScrollContext).workRef;
+
   return (
     <Center my={pxToRem(128)} as="section">
       <VStack gap={pxToRem(16)} alignItems="start">
@@ -41,7 +46,18 @@ export default function Hero() {
           clients. Currently I’m focusing on building web products.
         </Text>
 
-        <Button variant="solid" h={pxToRem(56)} px={pxToRem(36)}>
+        <Button
+          variant="solid"
+          h={pxToRem(56)}
+          px={pxToRem(36)}
+          onClick={() =>
+            (workRef.current as any).scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+              inline: "nearest",
+            })
+          }
+        >
           Check Projects
         </Button>
       </VStack>
