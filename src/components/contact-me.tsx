@@ -8,7 +8,7 @@ export default function ContactMe() {
   var contactMeRef = useContext(ScrollContext).contactRef;
 
   return (
-    <VStack ref={contactMeRef} gap={pxToRem(32)} w="full" my={pxToRem(128)}>
+    <VStack ref={contactMeRef} gap={pxToRem(32)} w="full" py={pxToRem(128)}>
       <Heading h={pxToRem(44)}>Contact Me</Heading>
       <Divider w="100%" maxW={pxToRem(800)} borderStyle="dashed" />
 

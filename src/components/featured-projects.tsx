@@ -46,7 +46,7 @@ export default function FeaturedProjects() {
   var featuredProjectsRef = useContext(ScrollContext).workRef;
 
   return (
-    <Box ref={featuredProjectsRef} as="section" my={pxToRem(128)}>
+    <Box ref={featuredProjectsRef} as="section" py={pxToRem(128)}>
       <Heading h={pxToRem(44)} w="full" textAlign="center" mb={pxToRem(32)}>
         Featured Projects
       </Heading>

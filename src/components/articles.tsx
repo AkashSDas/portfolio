@@ -38,7 +38,7 @@ export default function Articles() {
   var articleRef = useContext(ScrollContext).articlesRef;
 
   return (
-    <VStack ref={articleRef} gap={pxToRem(32)} w="full" my={pxToRem(128)}>
+    <VStack ref={articleRef} gap={pxToRem(32)} w="full" py={pxToRem(128)}>
       <Heading h={pxToRem(44)}>Other Noteworthy Projects</Heading>
       <Divider w="100%" maxW={pxToRem(800)} borderStyle="dashed" />
 
@@ -61,7 +61,9 @@ export default function Articles() {
         target="_blank"
         rel="noreferrer"
       >
-        <Button variant="outline">See More</Button>
+        <Button variant="outline" px={pxToRem(48)} h={pxToRem(48)}>
+          See More
+        </Button>
       </a>
     </VStack>
   );

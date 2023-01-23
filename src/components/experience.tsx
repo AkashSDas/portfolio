@@ -17,7 +17,7 @@ export default function Experience() {
   var experienceRef = useContext(ScrollContext).experienceRef;
 
   return (
-    <Center ref={experienceRef} as="section" my={pxToRem(128)}>
+    <Center ref={experienceRef} as="section" py={pxToRem(128)}>
       <VStack gap={pxToRem(32)} w="full">
         <Heading h={pxToRem(44)}>Experience</Heading>
         <Divider w="100%" maxW={pxToRem(800)} borderStyle="dashed" />
