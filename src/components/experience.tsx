@@ -3,7 +3,7 @@ import { useContext } from "react";
 
 import { pxToRem } from "@/lib/chakra-ui";
 import { ScrollContext } from "@/lib/context";
-import { Badge, Box, Center, Divider, Heading, HStack, Text, VStack } from "@chakra-ui/react";
+import { Badge, Box, Center, Divider, Heading, HStack, Stack, Text, VStack } from "@chakra-ui/react";
 
 export function renderSkills(skill: string) {
   return (
@@ -17,12 +17,17 @@ export default function Experience() {
   var experienceRef = useContext(ScrollContext).experienceRef;
 
   return (
-    <Center ref={experienceRef} as="section" py={pxToRem(128)}>
-      <VStack gap={pxToRem(32)} w="full">
+    <Center ref={experienceRef} as="section" py={pxToRem(128)} px={pxToRem(16)}>
+      <VStack gap={{ base: pxToRem(8), md: pxToRem(32) }} w="full">
         <Heading h={pxToRem(44)}>Experience</Heading>
         <Divider w="100%" maxW={pxToRem(800)} borderStyle="dashed" />
 
-        <HStack justifyContent="center" alignItems="center" gap={pxToRem(56)}>
+        <HStack
+          flexDirection={{ base: "column", md: "row" }}
+          justifyContent="center"
+          alignItems="center"
+          gap={{ base: pxToRem(8), md: pxToRem(56) }}
+        >
           <CompanyInfo />
           <Responsibilities />
         </HStack>
