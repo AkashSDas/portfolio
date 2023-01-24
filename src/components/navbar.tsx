@@ -22,6 +22,7 @@ export default function Navbar() {
       <HStack gap={pxToRem(8)}>
         <Button
           variant="ghost"
+          display={{ base: "none", md: "block" }}
           onClick={() =>
             (experienceRef.current as any).scrollIntoView({
               behavior: "smooth",
@@ -34,6 +35,7 @@ export default function Navbar() {
         </Button>
         <Button
           variant="ghost"
+          display={{ base: "none", md: "block" }}
           onClick={() =>
             (workRef.current as any).scrollIntoView({
               behavior: "smooth",
@@ -46,6 +48,7 @@ export default function Navbar() {
         </Button>
         <Button
           variant="ghost"
+          display={{ base: "none", md: "block" }}
           onClick={() =>
             (articlesRef.current as any).scrollIntoView({
               behavior: "smooth",
@@ -58,6 +61,7 @@ export default function Navbar() {
         </Button>
         <Button
           variant="ghost"
+          display={{ base: "none", md: "block" }}
           onClick={() =>
             (contactRef.current as any).scrollIntoView({
               behavior: "smooth",
