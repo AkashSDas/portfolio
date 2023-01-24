@@ -18,7 +18,7 @@ export default function Hero() {
 
         <VStack gap={0} alignItems="start">
           <Heading
-            fontSize={{ base: pxToRem(44), sm: pxToRem(60) }}
+            fontSize={{ base: pxToRem(50), sm: pxToRem(60) }}
             lineHeight={"100%"}
           >
             Akash Das
@@ -26,15 +26,18 @@ export default function Hero() {
 
           <Box gap={pxToRem(8)} mt={`0 !important`}>
             <Heading
-              fontSize={{ base: pxToRem(44), sm: pxToRem(60) }}
+              fontSize={{ base: pxToRem(50), sm: pxToRem(60) }}
               color="b.primary"
               lineHeight={"100%"}
+              display="inline-block"
+              mr={pxToRem(8)}
             >
               I Craft
             </Heading>
             <Heading
               lineHeight={"100%"}
-              fontSize={{ base: pxToRem(44), sm: pxToRem(60) }}
+              fontSize={{ base: pxToRem(50), sm: pxToRem(60) }}
+              display="inline-block"
             >
               Digital Solutions
             </Heading>

@@ -96,12 +96,12 @@ export default function Articles() {
         target="_blank"
         href={article.src}
         rel="noreferrer"
-        w={{ base: "full", md: pxToRem(420) }}
+        w={{ base: pxToRem(420) }}
       >
         <VStack gap={pxToRem(8)} role="group">
           <Box
             position="relative"
-            w={{ base: "full", md: pxToRem(420) }}
+            w={{ base: pxToRem(420) }}
             h={pxToRem(220.5)}
             transition="all 0.3s ease-in-out"
             _groupHover={{ transform: "scale(0.98)" }}

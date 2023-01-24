@@ -14,7 +14,7 @@ export default function Navbar() {
       justifyContent="space-between"
       gap={pxToRem(8)}
       h={pxToRem(56)}
-      px={pxToRem(32)}
+      px={{ base: pxToRem(16), md: pxToRem(32) }}
       as="nav"
     >
       <Text fontFamily="heading">/Root</Text>
