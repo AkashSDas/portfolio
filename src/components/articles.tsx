@@ -39,7 +39,7 @@ export default function Articles() {
 
   return (
     <VStack ref={articleRef} gap={pxToRem(32)} w="full" py={pxToRem(128)}>
-      <Heading h={pxToRem(44)}>Other Noteworthy Projects</Heading>
+      <Heading h={pxToRem(44)}>Latest Articles</Heading>
       <Divider w="100%" maxW={pxToRem(800)} borderStyle="dashed" />
 
       <SimpleGrid
