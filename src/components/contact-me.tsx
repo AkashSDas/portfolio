@@ -2,7 +2,7 @@ import { useContext } from "react";
 
 import { pxToRem } from "@/lib/chakra-ui";
 import { ScrollContext } from "@/lib/context";
-import { Badge, Center, Divider, Heading, HStack, Icon, Text, VStack } from "@chakra-ui/react";
+import { Badge, Divider, Heading, HStack, Icon, Text, VStack } from "@chakra-ui/react";
 
 export default function ContactMe() {
   var contactMeRef = useContext(ScrollContext).contactRef;
@@ -12,7 +12,12 @@ export default function ContactMe() {
       <Heading h={pxToRem(44)}>Contact Me</Heading>
       <Divider w="100%" maxW={pxToRem(800)} borderStyle="dashed" />
 
-      <Center>
+      <HStack
+        flexWrap="wrap"
+        justifyContent="center"
+        alignItems="center"
+        gap={pxToRem(16)}
+      >
         <Badge
           bg="b.border"
           color="rgba(28, 31, 36, 0.6)"
@@ -72,7 +77,7 @@ export default function ContactMe() {
             </HStack>
           </Badge>
         </a>
-      </Center>
+      </HStack>
     </VStack>
   );
 }

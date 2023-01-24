@@ -55,7 +55,7 @@ export default function App({ Component, pageProps }: AppProps) {
             contactRef,
           }}
         >
-          <Navbar />
+          {/* <Navbar /> */}
           <Component {...pageProps} />
         </ScrollContext.Provider>
       </ChakraProvider>

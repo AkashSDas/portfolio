@@ -2,42 +2,43 @@ import { useContext } from "react";
 
 import { pxToRem } from "@/lib/chakra-ui";
 import { ScrollContext } from "@/lib/context";
-import { Button, Center, HStack, Text, VStack } from "@chakra-ui/react";
+import { Box, Button, Center, Heading, Text, VStack } from "@chakra-ui/react";
 
 export default function Hero() {
   var workRef = useContext(ScrollContext).workRef;
 
   return (
-    <Center my={pxToRem(128)} as="section">
+    <Center
+      py={{ base: pxToRem(48), md: pxToRem(128) }}
+      px={pxToRem(16)}
+      as="section"
+    >
       <VStack gap={pxToRem(16)} alignItems="start">
         <Text>👋 Hi, my name is</Text>
 
         <VStack gap={0} alignItems="start">
-          <Text
-            fontFamily="heading"
-            fontSize={pxToRem(60)}
-            lineHeight={pxToRem(72)}
+          <Heading
+            fontSize={{ base: pxToRem(44), sm: pxToRem(60) }}
+            lineHeight={"100%"}
           >
             Akash Das
-          </Text>
+          </Heading>
 
-          <HStack flexWrap="wrap" gap={pxToRem(8)} mt={`0 !important`}>
-            <Text
-              fontFamily="heading"
-              fontSize={pxToRem(60)}
+          <Box gap={pxToRem(8)} mt={`0 !important`}>
+            <Heading
+              fontSize={{ base: pxToRem(44), sm: pxToRem(60) }}
               color="b.primary"
-              lineHeight={pxToRem(72)}
+              lineHeight={"100%"}
             >
               I Craft
-            </Text>
-            <Text
-              fontFamily="heading"
-              fontSize={pxToRem(60)}
-              lineHeight={pxToRem(72)}
+            </Heading>
+            <Heading
+              lineHeight={"100%"}
+              fontSize={{ base: pxToRem(44), sm: pxToRem(60) }}
             >
               Digital Solutions
-            </Text>
-          </HStack>
+            </Heading>
+          </Box>
         </VStack>
 
         <Text maxW={pxToRem(500)} opacity={0.6} lineHeight="140%">
@@ -48,7 +49,7 @@ export default function Hero() {
 
         <Button
           variant="solid"
-          h={pxToRem(56)}
+          h={{ base: pxToRem(48), sm: pxToRem(56) }}
           px={pxToRem(36)}
           onClick={() =>
             (workRef.current as any).scrollIntoView({

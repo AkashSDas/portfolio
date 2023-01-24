@@ -1,4 +1,4 @@
-import { useContext, useRef } from "react";
+import { useContext } from "react";
 
 import { pxToRem } from "@/lib/chakra-ui";
 import { ScrollContext } from "@/lib/context";
@@ -15,6 +15,7 @@ export default function Navbar() {
       gap={pxToRem(8)}
       h={pxToRem(56)}
       px={pxToRem(32)}
+      as="nav"
     >
       <Text fontFamily="heading">/Root</Text>
 

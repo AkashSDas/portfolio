@@ -37,15 +37,23 @@ var projects = [
 
 export default function NoteWorthyProjects() {
   return (
-    <VStack gap={pxToRem(32)} w="full" my={pxToRem(128)}>
-      <Heading h={pxToRem(44)}>Other Noteworthy Projects</Heading>
+    <VStack
+      gap={pxToRem(32)}
+      w="full"
+      as="section"
+      py={{ base: pxToRem(48), md: pxToRem(128) }}
+      px={pxToRem(16)}
+    >
+      <Heading h={pxToRem(44)} textAlign="center">
+        Other Noteworthy Projects
+      </Heading>
       <Divider w="100%" maxW={pxToRem(800)} borderStyle="dashed" />
 
       <SimpleGrid
-        w={["full", pxToRem(1024)]}
-        minChildWidth={["full", pxToRem(480)]}
-        column={[1, 3]}
-        gap={pxToRem(64)}
+        w={{ base: "full", lg: pxToRem(1024) }}
+        minChildWidth={{ base: "full", lg: pxToRem(480) }}
+        column={{ base: 1, lg: 2 }}
+        gap={{ base: pxToRem(16), lg: pxToRem(32) }}
         justifyItems="center"
         justifyContent="center"
         alignItems="center"
@@ -60,7 +68,7 @@ export default function NoteWorthyProjects() {
   function ProjectCard({ project }: { project: typeof projects[0] }) {
     return (
       <VStack
-        w={pxToRem(480)}
+        w={{ base: "full", md: pxToRem(480) }}
         maxW={pxToRem(480)}
         borderRadius={pxToRem(16)}
         border="1px solid"

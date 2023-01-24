@@ -3,7 +3,7 @@ import { useContext } from "react";
 
 import { pxToRem } from "@/lib/chakra-ui";
 import { ScrollContext } from "@/lib/context";
-import { Box, Button, Divider, Heading, HStack, SimpleGrid, Text, VStack } from "@chakra-ui/react";
+import { Box, Button, Divider, Heading, HStack, Link, Text, VStack } from "@chakra-ui/react";
 
 import { renderSkills } from "./experience";
 
@@ -38,48 +38,70 @@ export default function Articles() {
   var articleRef = useContext(ScrollContext).articlesRef;
 
   return (
-    <VStack ref={articleRef} gap={pxToRem(32)} w="full" py={pxToRem(128)}>
-      <Heading h={pxToRem(44)}>Latest Articles</Heading>
-      <Divider w="100%" maxW={pxToRem(800)} borderStyle="dashed" />
+    <Box
+      as="section"
+      ref={articleRef}
+      gap={pxToRem(32)}
+      w="100vw"
+      overflowX={{ base: "scroll", md: "hidden" }}
+      py={{ base: pxToRem(48), md: pxToRem(128) }}
+    >
+      <Heading
+        h={pxToRem(44)}
+        w="full"
+        textAlign="center"
+        mb={{ base: pxToRem(8), md: pxToRem(32) }}
+      >
+        Latest Articles
+      </Heading>
 
-      <SimpleGrid
-        w={["full", pxToRem(1024)]}
-        minChildWidth={["full", pxToRem(420)]}
-        column={[1, 3]}
-        gap={pxToRem(64)}
-        justifyItems="center"
-        justifyContent="center"
-        alignItems="center"
+      <Divider
+        w="100%"
+        maxW={pxToRem(800)}
+        borderStyle="dashed"
+        mx="auto"
+        mb={{ base: pxToRem(8), md: pxToRem(32) }}
+      />
+
+      <HStack
+        px={{ base: pxToRem(16), md: pxToRem(128) }}
+        gap={pxToRem(56)}
+        overflowX="scroll"
+        mb={{ base: pxToRem(8), md: pxToRem(32) }}
       >
         {articles.map((article) => (
           <ArticleCard key={article.coverImgURL} article={article} />
         ))}
-      </SimpleGrid>
+      </HStack>
 
-      <a
+      <Link
         href="https://medium.com/@akashsdas_dev"
         target="_blank"
         rel="noreferrer"
+        display="flex"
+        w="full"
+        justifyContent="center"
+        _hover={{ textDecoration: "none" }}
       >
-        <Button variant="outline" px={pxToRem(48)} h={pxToRem(48)}>
+        <Button mx="auto" variant="outline" px={pxToRem(48)} h={pxToRem(48)}>
           See More
         </Button>
-      </a>
-    </VStack>
+      </Link>
+    </Box>
   );
 
   function ArticleCard({ article }: { article: typeof articles[0] }) {
     return (
-      <a target="_blank" href={article.src} rel="noreferrer">
-        <VStack
-          w={pxToRem(420)}
-          maxW={pxToRem(420)}
-          gap={pxToRem(8)}
-          role="group"
-        >
+      <Link
+        target="_blank"
+        href={article.src}
+        rel="noreferrer"
+        w={{ base: "full", md: pxToRem(420) }}
+      >
+        <VStack gap={pxToRem(8)} role="group">
           <Box
             position="relative"
-            w={pxToRem(420)}
+            w={{ base: "full", md: pxToRem(420) }}
             h={pxToRem(220.5)}
             transition="all 0.3s ease-in-out"
             _groupHover={{ transform: "scale(0.98)" }}
@@ -97,7 +119,7 @@ export default function Articles() {
             <Text opacity={0.6}>{article.readTime} min read</Text>
           </HStack>
         </VStack>
-      </a>
+      </Link>
     );
   }
 }

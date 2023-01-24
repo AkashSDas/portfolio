@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useContext, useRef } from "react";
+import { useContext } from "react";
 
 import { pxToRem } from "@/lib/chakra-ui";
 import { ScrollContext } from "@/lib/context";
@@ -46,8 +46,17 @@ export default function FeaturedProjects() {
   var featuredProjectsRef = useContext(ScrollContext).workRef;
 
   return (
-    <Box ref={featuredProjectsRef} as="section" py={pxToRem(128)}>
-      <Heading h={pxToRem(44)} w="full" textAlign="center" mb={pxToRem(32)}>
+    <Box
+      ref={featuredProjectsRef}
+      as="section"
+      py={{ base: pxToRem(48), md: pxToRem(128) }}
+    >
+      <Heading
+        h={pxToRem(44)}
+        w="full"
+        textAlign="center"
+        mb={{ base: pxToRem(8), md: pxToRem(32) }}
+      >
         Featured Projects
       </Heading>
 
@@ -56,10 +65,15 @@ export default function FeaturedProjects() {
         maxW={pxToRem(800)}
         borderStyle="dashed"
         mx="auto"
-        mb={pxToRem(32)}
+        mb={{ base: pxToRem(8), md: pxToRem(32) }}
       />
 
-      <HStack px={pxToRem(128)} gap={pxToRem(56)} overflowX="auto">
+      <HStack
+        px={{ base: pxToRem(16), md: pxToRem(128) }}
+        gap={pxToRem(56)}
+        overflowX="auto"
+        flexDirection={{ base: "column", md: "row" }}
+      >
         {projects.map((project) => (
           <ProjectCard key={project.title} project={project} />
         ))}
@@ -70,8 +84,8 @@ export default function FeaturedProjects() {
   function ProjectCard({ project }: { project: typeof projects[0] }) {
     return (
       <VStack
-        w={pxToRem(500)}
-        minW={pxToRem(420)}
+        w={{ base: "full", md: pxToRem(500) }}
+        minW={{ base: "full", md: pxToRem(420) }}
         gap={pxToRem(16)}
         role="group"
       >

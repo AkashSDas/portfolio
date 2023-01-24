@@ -17,7 +17,12 @@ export default function Experience() {
   var experienceRef = useContext(ScrollContext).experienceRef;
 
   return (
-    <Center ref={experienceRef} as="section" py={pxToRem(128)} px={pxToRem(16)}>
+    <Center
+      ref={experienceRef}
+      as="section"
+      py={{ base: pxToRem(48), md: pxToRem(128) }}
+      px={pxToRem(16)}
+    >
       <VStack gap={{ base: pxToRem(8), md: pxToRem(32) }} w="full">
         <Heading h={pxToRem(44)}>Experience</Heading>
         <Divider w="100%" maxW={pxToRem(800)} borderStyle="dashed" />
@@ -38,7 +43,7 @@ export default function Experience() {
   function Responsibilities() {
     return (
       <VStack w="full" maxW={pxToRem(540)} gap={pxToRem(16)}>
-        <Text fontSize={pxToRem(18)} fontWeight="medium">
+        <Text textAlign="center" fontSize={pxToRem(18)} fontWeight="medium">
           JavaScript / NextJS / Redux / TypeScript Developer
         </Text>
 

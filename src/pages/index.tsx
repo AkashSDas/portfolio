@@ -1,15 +1,10 @@
-import { isValidMotionProp, motion } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
-
 import Articles from "@/components/articles";
 import ContactMe from "@/components/contact-me";
 import Experience from "@/components/experience";
 import FeaturedProjects from "@/components/featured-projects";
 import Hero from "@/components/hero";
 import NoteWorthyProjects from "@/components/note-worthy-projects";
-import { pxToRem } from "@/lib/chakra-ui";
-import { Badge, Box, Center, chakra, Divider, Heading, HStack, Icon, LinkBox, Text, VStack } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
 export default function HomePage() {
   return (
