@@ -97,6 +97,7 @@ export default function Articles() {
         href={article.src}
         rel="noreferrer"
         w={{ base: pxToRem(420) }}
+        _hover={{ textDecoration: "none" }}
       >
         <VStack gap={pxToRem(8)} role="group">
           <Box

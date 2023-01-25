@@ -87,6 +87,10 @@ export default function Experience() {
             Freelance
           </Text>
 
+          <Text fontFamily="heading" fontSize={pxToRem(20)}>
+            @
+          </Text>
+
           <Box position="relative" w={pxToRem(72)} h={pxToRem(36)}>
             <Image
               src="/upwork-logo.svg"
